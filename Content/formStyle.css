@@ -1,0 +1,98 @@
+body{
+    background-color: lightgray;
+    text-align: center;
+    /* position: relative; */
+}
+
+/* 
+.father {
+    position: relative;
+}
+.son {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+} */
+/* 外围容器 */
+#c0{
+    width: 600px;  
+    position: fixed;
+    margin-top: 50px;
+    background-color: whitesmoke;    
+    border: 2px rgb(194, 194, 212);
+    border-style: solid;
+    border-radius: 15px;
+
+    /* position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto; */
+}
+/* 头部 */
+#cHead{
+    background-color: cornflowerblue;
+    color:white;
+    padding: 5px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+/* 主体部分 */
+#cBody{
+    text-align: left;
+    padding: 10px 50px;
+}
+/* 每一项输入 */
+.c_Inner{
+    margin-top: 10px;
+}
+.c_Inner input{
+    float: right;
+    width: 300px;
+}
+/* 标红 */
+.important{
+    color: red;
+}
+/* 格式正确标绿 */
+.importantRight{
+    color: green;
+}
+/* 提示 */
+.redTips{
+    margin-top: 2px;
+    text-align: left;  
+    font-size: 10px;
+}
+/* 分割线 */
+.item_{
+    border: 0.5px cornflowerblue dashed;
+}
+/* 足 */
+#cFoot{
+    border:  1px;
+    border-top-style: solid;  
+    padding: 5px;   
+    font-size: 10px;
+}
+/* 提交按钮 */
+.btn{
+    border-radius: 12px;
+    background-color: cornflowerblue;
+    color:white;  
+    width: 80px;
+    /* box-shadow: 0 2px rgb(194, 194, 212); */
+    border: 1px solid cornflowerblue;
+}
+
+.btn:hover{
+    background-color: rgb(81, 118, 187);
+}
+.btn:active { 
+    transform: translateY(4px);
+  }
+/* -------------------第一次写外置的css 20190312 add by missfox---------------- */

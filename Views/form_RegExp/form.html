@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>表单验证 + 正则表达式使用</title>
+    <link rel="stylesheet" href="../../Content/formStyle.css">
+</head>
+<body>
+    <div id="c0">
+        <div id="cHead">--账户信息--</div>
+        <div id="cBody">
+            <div id="cInner1" class="c_Inner">
+                <span class="important">*</span>
+                <label for="txtUser">用户名：</label>
+                <input type="text" name="user" id="txtUser" placeholder="用户设置成功后不可修改">
+                <div class="redTips important"></div>
+            </div>
+            <p class="item_"></p>
+            <div id="cInner2" class="c_Inner">
+                <span class="important">*</span>
+                <label for="txtPass">登录密码：</label>
+                <input type="text" name="pass" id="txtPass" placeholder="6-18位字母、数字或者符号">
+                <div class="redTips important"></div>
+            </div>
+            <p class="item_"></p>
+            <div id="cInner3" class="c_Inner">
+                <span class="important">*</span>
+                <label for="txtPassCf">确认密码：</label>
+                <input type="text" name="passCf" id="txtPassCf">
+                <div class="redTips important"></div>
+            </div>
+            <p class="item_"></p>
+            <div id="cInner4" class="c_Inner">
+                <span class="important">*</span>
+                <label for="txtName">姓名：</label>
+                <input type="text" name="sName" id="txtName" placeholder="请输入姓名，中文且最多五位">
+                <div class="redTips important"></div>
+            </div>
+            <p class="item_"></p>
+            <div id="cInner5" class="c_Inner">
+                <span class="important">*</span>
+                <label for="txtIdCard">身份证号：</label>
+                <input type="text" name="idCard" id="txtIdCard" placeholder="请输入身份证号">
+                <div class="redTips important"></div>
+            </div>
+            <p class="item_"></p>
+            <div id="cInner6" class="c_Inner">
+                <span class="important">*</span>
+                <label for="txtEmail">邮箱：</label>
+                <input type="email" name="email" id="txtEmail" placeholder="请输入正确的邮箱">
+                <div class="redTips important"></div>
+            </div>
+            <p class="item_"></p>
+            <div id="cInner7" class="c_Inner">
+                <span class="important">*</span>
+                <label for="txtTel">手机号码：</label>
+                <input type="tel" name="tel" id="txtTel" placeholder="请输入你的手机密码">
+                <div class="redTips important"></div>
+            </div>
+            <p class="item_"></p>
+        </div>
+        <div id="cFoot">
+            <input type="checkbox" name="ckrule" id="ckRule">
+            <label for="ckrule">我已阅读并同意遵守规定。</label>
+            <input class="btn" type="button" value="确认提交" id="btnSubmit">
+        </div> 
+        <div id="imgDiv">
+            <img src="../../Images/5-140FGZ251.gif" alt="footImg">
+        </div>
+    </div>
+    <script>
+    </script>
+</body>
+
+</html>
+<script src="../../Scripts/form_RegExp/form.js"></script>
