@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>椭圆可点击区域</title>
+</head>
+<style>
+    .dot {
+        position: absolute;
+        width: 2px;
+        height: 1px;
+        overflow: hidden;
+        font-size: 0;
+        line-height: 0;
+        background: red;
+    }
+
+    #canvas {
+        width: 800px;
+        height: 600px;
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+</style>
+
+<body>
+    <div id="canvas">       
+    </div>
+    <script>
+
+        var CommonUtil = {
+            // 事件对象，事件类型，事件句柄
+            addHandler: function (e, t, h) {
+                if (e.addEventListener) {
+                    e.addEventListener(t, h, false);
+                } else if (e.attachEvent) {
+                    e.attachEvent("on" + t, h);
+                } else {
+                    e["on" + t] = null;
+                }
+            },
+            getTarget: function (e) {
+                return e.target || e.srcElement;
+            }
+        }
+
+        // 画布，圆心坐标，椭圆长轴长和短轴长
+        function drawEllipse(e, p) {
+            var doc = document.createDocumentFragment();
+            for (var i = 0; i < 360; i++) {
+                var dot = document.createElement('div');
+                dot.className = 'dot';
+                // 参数方程
+                var x = p.a * Math.cos(i) + p.x;
+                var y = p.b * Math.sin(i) + p.y;
+
+                dot.style.left = x + 'px';
+                dot.style.top = y + 'px';
+
+                doc.appendChild(dot);
+            }
+            e.appendChild(doc);
+        }
+
+        function bindClick(e, p) {
+            CommonUtil.addHandler(e, 'click', function (event) {
+                var r = Math.pow((event.clientX - p.x) / p.a, 2) + Math.pow((event.clientY - p.y) / p.b, 2);
+                if (r <= 1) {
+                    alert('我被点击了');
+                }
+            });
+        }
+
+
+        function main() {
+            var canvas = document.getElementById("canvas");
+            // x,y 圆心， a 长轴长；b 短轴长。
+            var p = { x: 400, y: 300, a: 100, b: 80 };
+
+            drawEllipse(canvas, p);
+            bindClick(canvas, p);
+        }
+
+        main();
+
+    </script>
+</body>
+
+</html>
