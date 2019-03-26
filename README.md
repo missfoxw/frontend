@@ -8,7 +8,7 @@
 
 最近团队项目转JAVA微服务+VUE技术栈。学习VUE框架时，深感前端基础知识的重要性，此库作为练习、积累用。
 
-# Important
+# important
 列出今年重点学习的三件重要的事情：
 * html
 * css
