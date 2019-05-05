@@ -8,10 +8,9 @@
 * JavaScript
 
 # index
-1. form和正则校验 form_RegExp
-2. 椭圆可点击区域
+1. 20190312-[Form和正则校验](https://github.com/missfoxw/frontend/tree/master/Scripts/form_RegExp)
+2. 20190326-[椭圆可点击区域](https://github.com/missfoxw/frontend/tree/master/Views/%E6%A4%AD%E5%9C%86%E5%8F%AF%E7%82%B9%E5%87%BB%E5%8C%BA%E5%9F%9F)
 3. 跨浏览器兼容脚本 cross-browser
-4. 布局 layout
  
 
 # about
